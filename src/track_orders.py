@@ -46,7 +46,7 @@ class TrackOrders:
 
     def get_least_busy_day(self):
         days = set_dict_days(self.tracks)
-        worst_days_amount = 1000
+        worst_days_amount = max(days.values())
         worst_days_name = str()
         for key, value in days.items():
             if value < worst_days_amount:
