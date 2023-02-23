@@ -78,27 +78,3 @@ hamburguer
 {'pao': 40, 'carne': 33, 'queijo': 48, 'molho': 8, 'presunto': 7, 'massa': 16, 'frango': 8}))
 ```
 
-#### Campanha de publicidade
-> comando: python3 -m src.analyze_log
-
-Função cria o arquivo `data/mkt_campaign.txt` contendo as sequintes análises:
-
-```
-Qual o prato mais pedido por 'maria'?
-
-Quantas vezes 'arnaldo' pediu 'hamburguer'?
-
-Quais pratos 'joao' nunca pediu?
-
-Quais dias 'joao' nunca foi à lanchonete?
-```
-
-```
-Retorno:
-
-hamburguer
-1
-{'coxinha', 'misto-quente', 'pizza'}
-{'segunda-feira', 'sabado'}
-```
-
