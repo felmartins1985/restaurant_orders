@@ -69,4 +69,5 @@ def analyze_log(path_to_file):
             )
 
 
-# print(analyze_log("data/orders_1.csv"))
+if __name__ == "__main__":
+    analyze_log("data/orders_1.csv")
