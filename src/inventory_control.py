@@ -49,37 +49,16 @@ class InventoryControl:
     
     
 if __name__ == "__main__":
-    track_orders = TrackOrders()
-
-    orders = [
-        ["jorge", "frango", "domingo"],
-        ["maria", "frango", "segunda-feira"],
-        ["arnaldo", "peixe", "sábado"],
-        ["maria", "carne", "terça-feira"],
-        ["joao", "salada", "segunda-feira"],
-    ]
-
-    for name, dish, day in orders:
-        print(f'Adicionando pedido: {name, dish, day}')
-        track_orders.add_new_order(name, dish, day)
+    inventory = InventoryControl()
+    inventory.add_new_order("jorge", "hamburguer", "terça-feira")
+    inventory.add_new_order("maria", "pizza", "terça-feira")
 
     print(
-        'Prato mais pedido por Maria:',
-        track_orders.get_most_ordered_dish_per_customer("maria"),
+        'Quantidade de ingredientes para comprar:',
+        inventory.get_quantities_to_buy(),
     )
+
     print(
-        'Prato nunca pedido por João:',
-        track_orders.get_never_ordered_per_customer("joao"),
-    )
-    print(
-        'Dia(s) que João nunca visitou:',
-        track_orders.get_days_never_visited_per_customer("joao"),
-    )
-    print(
-        'Dia de maior movimento:',
-        track_orders.get_busiest_day(),
-    )
-    print(
-        'Dia de menor movimento:',
-        track_orders.get_least_busy_day(),
+        'Pratos disponíveis no cardápio:',
+        inventory.get_available_dishes(),
     )
