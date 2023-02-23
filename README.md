@@ -78,3 +78,55 @@ hamburguer
 {'pao': 40, 'carne': 33, 'queijo': 48, 'molho': 8, 'presunto': 7, 'massa': 16, 'frango': 8}))
 ```
 
+#### Campanha de publicidade
+> comando: python3 -m src.analyze_log
+
+Função cria o arquivo `data/mkt_campaign.txt` contendo as sequintes análises:
+
+```
+Qual o prato mais pedido por 'maria'?
+
+Quantas vezes 'arnaldo' pediu 'hamburguer'?
+
+Quais pratos 'joao' nunca pediu?
+
+Quais dias 'joao' nunca foi à lanchonete?
+```
+
+```
+Retorno:
+
+hamburguer
+1
+{'coxinha', 'misto-quente', 'pizza'}
+{'segunda-feira', 'sabado'}
+```
+
+#### Análises contínuas
+> comando: python3 -m src.track_orders
+
+```
+Retorno:
+
+Adicionando pedido: ('jorge', 'frango', 'domingo')
+Adicionando pedido: ('maria', 'frango', 'segunda-feira')
+Adicionando pedido: ('arnaldo', 'peixe', 'sábado')
+Adicionando pedido: ('maria', 'carne', 'terça-feira')
+Adicionando pedido: ('joao', 'salada', 'segunda-feira')
+Prato mais pedido por Maria: carne
+Prato nunca pedido por João: {'frango', 'peixe', 'carne'}
+Dia(s) que João nunca visitou: {'sábado', 'domingo', 'terça-feira'}
+Dia de maior movimento: segunda-feira
+Dia de menor movimento: domingo
+```
+
+
+#### Controle de estoque
+> comando: python3 -m src.inventory_control
+
+```
+Retorno:
+
+Quantidade de ingredientes para comprar: {'pao': 1, 'carne': 1, 'queijo': 2, 'molho': 1, 'presunto': 0, 'massa': 1, 'frango': 0}
+Pratos disponíveis no cardápio: {'misto-quente', 'coxinha', 'pizza', 'hamburguer'}
+```
